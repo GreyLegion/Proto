@@ -30,6 +30,7 @@ echo $test;
 
 if (!empty($row)){
 $upd = "UPDATE section SET objective='$test'";
+//UPDATE `section` SET `objective` = '{$test}' WHERE `data` = '{$_GET['data']}'
 $rs1 = $mysqli->query($upd);
 echo" XXXXX ";
 var_dump($rs1);
