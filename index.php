@@ -1,3 +1,7 @@
+#пока все работает
+
+
+
 <form name='data_base' method='post'>
 	  <p><b>Name: </b>
 	  <input name="n" type="text" size="20">
