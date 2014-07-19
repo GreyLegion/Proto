@@ -31,7 +31,3 @@
 		$mysqli->close();
 	}
 	  ?>	   
-	   
-	   
-<?PHP 
-?>
