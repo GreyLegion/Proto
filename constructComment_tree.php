@@ -1,22 +1,35 @@
 <?PHP
+
 ## PHP4
 ## Построение дерева
 
 ## подключаемся к базе данных
-$mysqli = new mysqli('localhost', 'root', '', 'test_base');
+
+function Connection_database(){
+	$mysqli = new mysqli('localhost', 'root', '', 'test_base');
+	if (mysqli_connect_errno()){
+		printf("Подключение к серверу MySQL невозможно. Код ошибки: %s\n", mysqli_connect_error());
+		exit;
+	}
+	return $mysqli;
+}
+
+/*$mysqli = new mysqli('localhost', 'root', '', 'test_base');
 	if (mysqli_connect_errno()){
 			printf("Подключение к серверу MySQL невозможно. Код ошибки: %s\n", mysqli_connect_error());
 			exit;
 	}
-	
+	*/
+$mysqli2 = Connection_database();
+
 ## метод читает из таблицы comment_table все строки, и
 ## возвращает двумерный массив, в котором первый ключ - id родителя 
 ## категории (parent_id)
 ## @return Array
 function getComment_table(){
-	global $mysqli;
+	global $mysqli2;
 	$query = "SELECT * FROM `comment_table`";
-	$res = $mysqli->query($query);
+	$res = $mysqli2->query($query);
 	$result = array();
 	while ($row = mysqli_fetch_array($res)){
 		$result[$row["parent_id"]][] = $row;
