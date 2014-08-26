@@ -1,3 +1,7 @@
+#Fatal error: Cannot redeclare Connection_database() (previously declared in 
+#C:\OpenServer\domains\localhost\constructComment_tree.php:8)
+#in C:\OpenServer\domains\localhost\constructComment_tree.php on line 15
+
 <?PHP
 
 ## PHP4
