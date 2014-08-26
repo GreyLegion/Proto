@@ -2,6 +2,24 @@
 #C:\OpenServer\domains\localhost\constructComment_tree.php:8)
 #in C:\OpenServer\domains\localhost\constructComment_tree.php on line 15
 
+/*
+class tree extends mysqli{
+
+function getComment_table(){
+	$query = "SELECT * FROM `comment_table`";
+	$res = $this->query($query);
+	$result = array();
+	while ($row = $res->fetch_assoc()){
+		$result[$row["parent_id"]][] = $row;
+	}
+	return $result;
+}
+
+}
+
+
+
+*/
 <?PHP
 
 ## PHP4
