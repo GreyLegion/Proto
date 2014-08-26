@@ -17,6 +17,8 @@ function getComment_table(){
 
 }
 
+$tree = new tree('localhost', 'root', '', 'test_base');
+$tree->getComment_table();
 
 
 */
